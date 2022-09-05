@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         notesList.addChangeListener(new RealmChangeListener<RealmResults<Notes>>() {
             @Override
             public void onChange(RealmResults<Notes> notes) {
+
                 myAdapter.notifyDataSetChanged();
             }
         });

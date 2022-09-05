@@ -1,6 +1,7 @@
 package com.example.notes;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,11 +35,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-          Notes notes=noteslist.get(position);
-        holder.titleOut.setText(notes.getTitle());
-        holder.descriptionOut.setText(notes.getDescription());
-        String formatedTime= DateFormat.getDateTimeInstance().format(notes.getCreatedTim());
-        holder.titleOut.setText(formatedTime);
+        Notes notes=noteslist.get(position);
+        Log.d("Notes",notes.toString());
+
+//            holder.titleOut.setText(notes.getTitle().toString());
+//            holder.descriptionOut.setText(notes.getDescription().toString());
+//            String formatedTime = DateFormat.getDateTimeInstance().format(notes.getCreatedTim());
+//            holder.titleOut.setText(formatedTime);
     }
 
     @Override
