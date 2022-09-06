@@ -34,6 +34,8 @@
             android:layout_margin="10dp"
             android:hint="Title"
             android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             />
         <EditText
             android:id="@+id/DescriptionInp"
@@ -42,7 +44,10 @@
             android:layout_margin="10dp"
             android:hint="Description"
             android:padding="10dp"
-            android:lines="5"/>
+            android:lines="5"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/saveBtn"
