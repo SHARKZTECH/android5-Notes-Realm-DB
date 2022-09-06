@@ -38,10 +38,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         Notes notes=noteslist.get(position);
         Log.d("Notes",notes.toString());
 
-//            holder.titleOut.setText(notes.getTitle().toString());
-//            holder.descriptionOut.setText(notes.getDescription().toString());
-//            String formatedTime = DateFormat.getDateTimeInstance().format(notes.getCreatedTim());
-//            holder.titleOut.setText(formatedTime);
+            holder.titleOut.setText(notes.getTitle().toString());
+            holder.descriptionOut.setText(notes.getDescription().toString());
+            String formatedTime = DateFormat.getDateTimeInstance().format(notes.getCreatedTim());
+            holder.timeOut.setText(formatedTime);
     }
 
     @Override
@@ -56,7 +56,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            timeOut=itemView.findViewById(R.id.titleOut);
+            titleOut=itemView.findViewById(R.id.titleOut);
             descriptionOut=itemView.findViewById(R.id.DescriptionOut);
             timeOut=itemView.findViewById(R.id.createdTimOut);
 
